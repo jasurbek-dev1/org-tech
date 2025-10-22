@@ -26,7 +26,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-[600px] md:h-[700px] overflow-hidden rounded-2xl group">
+    <div className="relative w-full h-[400px] md:h-[700px] overflow-hidden rounded-2xl group">
       <div className="absolute inset-0 bg-gradient-to-b from-[#00BFFF]/20 via-transparent to-[#8A2BE2]/20 z-10 pointer-events-none"></div>
 
       <div
