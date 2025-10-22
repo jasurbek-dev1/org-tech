@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const laptopImages = [
-  '/ChatGPT-Image-Oct-22-2025-06_17_57-PM.png', // public ichidagi fayl
+  '/ChatGPT Image Oct 22, 2025, 06_17_57 PM.png', // public ichidagi fayl
   'https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=1200',
   'https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=1200',
 ];
