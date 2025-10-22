@@ -1,4 +1,4 @@
-import { Target, Users, Sparkles,  } from 'lucide-react';
+import { Target, Users, Sparkles } from 'lucide-react';
 
 const About = () => {
   return (
@@ -21,7 +21,7 @@ const About = () => {
             style={{ animation: 'fadeInLeft 0.8s ease-out' }}
           >
             <img
-              src="public/logo.jpg"
+              src="/logo.jpg"  
               alt="ORGTECH ish muhiti"
               className="w-full h-[500px] object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700"
             />
@@ -86,14 +86,14 @@ const About = () => {
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
             Mahsulotlarimiz haqida savollaringiz bormi? Mutaxassislarimiz sizga mos noutbukni tanlashda yordam berishdan mamnun.
           </p>
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-           <a
-  href="tel:+998335977770"
-  className="flex items-center space-x-3 px-8 py-4 rounded-full glass-effect hover:border-[#00BFFF]/60 transition-all duration-300 group"
->
-  
-  <span className="text-gray-300">+998 33 597 77 70</span>
-</a>
+            <a
+              href="tel:+998335977770"
+              className="flex items-center space-x-3 px-8 py-4 rounded-full glass-effect hover:border-[#00BFFF]/60 transition-all duration-300 group"
+            >
+              <span className="text-gray-300">+998 33 597 77 70</span>
+            </a>
 
             <a
               href="tg://resolve?domain=ORGTECH_admin"

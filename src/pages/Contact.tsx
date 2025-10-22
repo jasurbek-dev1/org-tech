@@ -4,6 +4,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-32 pb-20 px-4">
       <div className="max-w-7xl mx-auto">
+        {/* Sarlavha */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text animate-float">
             Biz bilan bog‘laning
@@ -71,7 +72,7 @@ const Contact = () => {
           >
             <div className="text-center mb-8">
               <img
-                src="/logo.jpg"
+                src="/logo.jpg" // ✅ faqat `/` dan boshlanishi kerak
                 alt="ORGTECH Logo"
                 className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-[#00BFFF] object-cover shadow-lg"
               />
@@ -113,25 +114,12 @@ const Contact = () => {
 
       <style>{`
         @keyframes fadeInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
+          from { opacity: 0; transform: translateX(-30px); }
+          to { opacity: 1; transform: translateX(0); }
         }
-
         @keyframes fadeInRight {
-          from {
-            opacity: 0;
-            transform: translateX(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
+          from { opacity: 0; transform: translateX(30px); }
+          to { opacity: 1; transform: translateX(0); }
         }
       `}</style>
     </div>

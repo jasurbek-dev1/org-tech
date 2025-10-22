@@ -22,53 +22,19 @@ const Home = () => {
   ];
 
   const laptopsData = [
-    {
-      image: 'public/hp-ominbook.jpg',
-      model: ' Hp omnibook X Flip Laptop',
-   
-      price: 659,
-    },
-    {
-      image: 'public/asus.jpg',
-      model: 'Asus Rog Strix G614J',
-      price: 960,
-    },
-    {
-      image: 'public/acer.jpg',
-      model: 'Asus Vivobook ',
-      price: 339,
-    },
-    {
-      image: 'public/hp-360.jpg',
-      model: ' Hp Probook',
-      price: 210,
-
-    },
-    {
-      image: 'public/hp-1.jpg',
-      model: 'Hp Elitebook',
-      price: 310,
-    },
-    {
-      image: 'public/gaming.jpg',
-      model: 'Msi Gaming GF-63',
-      price: 390,
-    },
-    {
-      image: 'public/mac.jpg',
-      model: 'Macbook Pro 2017',
-      price: 299,
-    },
-    {
-      image: 'public/hp-laptop.jpg',
-      model: ' Hp laptop ',
-      price: 155,
-    },
+    { image: '/hp-ominbook.jpg', model: 'HP Omnibook X Flip Laptop', price: 659 },
+    { image: '/asus.jpg', model: 'Asus Rog Strix G614J', price: 960 },
+    { image: '/acer.jpg', model: 'Asus Vivobook', price: 339 },
+    { image: '/hp-360.jpg', model: 'HP Probook', price: 210 },
+    { image: '/hp-1.jpg', model: 'HP Elitebook', price: 310 },
+    { image: '/gaming.jpg', model: 'MSI Gaming GF-63', price: 390 },
+    { image: '/mac.jpg', model: 'Macbook Pro 2017', price: 299 },
+    { image: '/hp-laptop.jpg', model: 'HP Laptop', price: 155 },
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Slider bo‘limi */}
+      {/* SLIDER */}
       <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#00BFFF]/10 via-[#0a0a0a] to-[#8A2BE2]/10"></div>
 
@@ -88,7 +54,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Noutbuklar bo‘limi */}
+      {/* LAPTOPLAR */}
       <section className="py-20 px-4 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
@@ -109,7 +75,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Afzalliklar bo‘limi */}
+      {/* AFSALLIKLAR */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
