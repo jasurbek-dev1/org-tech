@@ -22,14 +22,14 @@ export default function ProductCard({
 
   const handleBuyNow = () => {
     const message = `
-Salom! 😊
+Assalomu alaykum!
 Menga quyidagi noutbuk yoqdi:
 
 🖥️ Model: ${model}
 💰 Narxi: $${price}
 🖼️ Rasm: ${window.location.origin}${image}
 
-Men shu noutbukni sotib olmoqchiman. Iltimos, bog‘laning!
+Menga shu noutbuk yoqdi ! Javobingizni kutaman
     `;
     const encodedMessage = encodeURIComponent(message.trim());
     const url = `https://t.me/${ADMIN_USERNAME}?text=${encodedMessage}`;

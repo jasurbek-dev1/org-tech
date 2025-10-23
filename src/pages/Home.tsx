@@ -25,7 +25,19 @@ const Home = () => {
   ];
 
   const laptopsData = [
-    {
+   {
+      image: "/new-noutbuk1.jpg",
+      model: "Lenovo Ideapad 1 (New)",
+      price: 305,
+      specs: `⚙ AMD Ryzen 3 7320U 2.4Ghz
+⚙ RAM / DDR5 8GB
+⚙ Xotira / SSD NVMe 512GB
+⚙Videokarta / INTEGRATED
+⚙ Ekran / 15.6” Full HD (1920x1080)
+⚙ Batareyka 3-CELL
+⭐️ Holati yangi karobka dokument ishlamagan
+🕘 3 oy servis kafolati mavjud`,
+    }, {
       image: "/asus.jpg",
       model: "Asus Rog Strix G614J",
       price: 960,
@@ -50,7 +62,19 @@ const Home = () => {
 ⭐️ Holati yangi karobka dokument ishlamagan
 🕘 3 oy servis kafolati mavjud`,
     },
-    {
+     {
+      image: "/new-noutbuk2.jpg",
+      model: " Acer aspire 5",
+      price: 405,
+      specs: `⚙ intel Core i7-1355U 1.70Ghz (10-yadro 12-potok)
+⚙ RAM / DDR5 16GB
+⚙ Xotira / SSD NVMe 512GB
+⚙Videokarta / intel Iris Xe Graphics 
+⚙ Ekran / 15.6” Full HD (1920x1080)
+⚙ Batareyka saqlashi yaxshi 
+⭐️ Holati ideal ustida azgina chizilgan joyi bor
+🕘 1 oy servis kafolati mavjud`,
+    },{
       image: "/acer.jpg",
       model: "Asus Vivobook",
       price: 339,
@@ -63,19 +87,7 @@ const Home = () => {
 ⭐️ Holati ideal
 🕘 1 oy servis kafolati mavjud`,
     },
-    {
-      image: "/hp-360.jpg",
-      model: "HP Probook",
-      price: 210,
-      specs: `⚙ intel Core i7-8550U 1.80Ghz 
-⚙ RAM / DDR4 8GB
-⚙ Xotira / SSD 256GB
-⚙Videokarta / intel UHD Graphics 620
-⚙ Ekran / 14.0” Full HD (1920x1080) x360 sensorli ekran
-⚙ Batareyka saqlashi yaxshi 
-⭐️ Holati ideal bir dona knopkasi yo’q rasmda ko’rsatilgan
-🕘 1 oy servis kafolati mavjud.`,
-    },
+   
     {
       image: "/hp-1.jpg",
       model: "HP Elitebook",
@@ -118,19 +130,7 @@ const Home = () => {
 • Holati yaxshi aybi rasmda
 • 1 oy servis kafolati mavjud`,
     },
-    {
-      image: "/hp-laptop.jpg",
-      model: "HP Laptop",
-      price: 155,
-      specs: `⚙ intel Core i3-1005G1
-⚙ RAM / DDR4 8GB
-⚙ Xotira / SSD NVMe 256GB
-⚙Videokarta / intel UHD Graphics 
-⚙ Ekran / 15.6” HD display
-⚙ Batareyka saqlashi yaxshi 
-⭐️ Holati yaxshi aybi rasmda
-🕘 1 oy servis kafolati mavjud.`,
-    },
+    
   ];
 
   return (
