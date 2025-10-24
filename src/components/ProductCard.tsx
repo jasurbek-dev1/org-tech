@@ -1,23 +1,19 @@
-import  { useState } from "react";
+'use client';
+
+import { useState } from "react";
 import { ShoppingCart, Info } from "lucide-react";
 
 interface ProductCardProps {
   image: string;
   model: string;
   price: number;
-  specs: string; // Har bir noutbuk uchun alohida ma’lumot
+  specs: string;
   index: number;
 }
 
 const ADMIN_USERNAME = "Orgtech_notebooks";
 
-export default function ProductCard({
-  image,
-  model,
-  price,
-  specs,
-  index,
-}: ProductCardProps) {
+export default function ProductCard({ image, model, price, specs, index }: ProductCardProps) {
   const [showModal, setShowModal] = useState(false);
 
   const handleBuyNow = () => {
@@ -29,54 +25,53 @@ Menga quyidagi noutbuk yoqdi:
 💰 Narxi: $${price}
 🖼️ Rasm: ${window.location.origin}${image}
 
-Menga shu noutbuk yoqdi ! Javobingizni kutaman
+Menga shu noutbuk yoqdi! Javobingizni kutaman.
     `;
     const encodedMessage = encodeURIComponent(message.trim());
-    const url = `https://t.me/${ADMIN_USERNAME}?text=${encodedMessage}`;
-    window.open(url, "_blank");
+    window.open(
+      `https://t.me/${ADMIN_USERNAME}?text=${encodedMessage}`,
+      "_blank"
+    );
   };
 
   return (
     <>
-      {/* CARD */}
       <div
-        className="group relative bg-gradient-to-br from-[#0f0f19] to-[#0a0a0a] rounded-xl overflow-hidden border border-[#00BFFF]/20 hover:border-[#00BFFF]/60 transition-all duration-500 hover:shadow-2xl hover:shadow-[#00BFFF]/30 hover:-translate-y-2"
-        style={{
-          animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
-        }}
+        className="flex flex-col bg-gradient-to-b from-[#141414] to-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-lg hover:shadow-white/10 transition-all duration-300 hover:-translate-y-2"
+        style={{ animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both` }}
       >
-        <div className="relative h-60 overflow-hidden bg-[#1a1a2e]">
+        {/* IMAGE */}
+        <div className="h-44 w-full overflow-hidden relative">
           <img
             src={image}
             alt={model}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-60"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
         </div>
 
-        <div className="p-5 relative z-10">
-          <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#00BFFF] transition-colors duration-300">
-            {model}
-          </h3>
-
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-2xl font-bold gradient-text">${price}</span>
+        {/* CONTENT */}
+        <div className="flex flex-col justify-between flex-grow p-4">
+          <div className="mb-4">
+            <h3 className="text-base sm:text-lg font-semibold text-white mb-1">{model}</h3>
+            <p className="text-lg sm:text-xl font-bold text-gray-300">${price}</p>
           </div>
 
-          <div className="flex space-x-2">
+          {/* Buttons */}
+          <div className="mt-auto flex gap-2 flex-wrap">
             <button
               onClick={() => setShowModal(true)}
-              className="flex-1 py-2 px-3 rounded-lg border border-[#00BFFF]/40 text-[#00BFFF] hover:bg-[#00BFFF]/10 transition-all duration-300 font-semibold flex items-center justify-center space-x-1"
+              className="flex-1 py-2 px-3 border border-gray-700 text-gray-300 rounded-lg hover:bg-gray-800 hover:border-gray-500 transition-all flex items-center justify-center gap-1 text-sm"
             >
-              <Info size={18} />
+              <Info size={16} />
               <span>Ma’lumot</span>
             </button>
 
             <button
               onClick={handleBuyNow}
-              className="flex-1 py-2 px-3 rounded-lg bg-gradient-to-r from-[#00BFFF] to-[#8A2BE2] hover:from-[#00BFFF]/90 hover:to-[#8A2BE2]/90 transition-all duration-300 font-semibold text-white flex items-center justify-center space-x-1 hover:shadow-lg hover:shadow-[#00BFFF]/40"
+              className="flex-1 py-2 px-3 rounded-lg bg-gradient-to-r from-white to-gray-200 text-black font-semibold hover:from-gray-300 hover:to-white transition-all flex items-center justify-center gap-1 text-sm"
             >
-              <ShoppingCart size={18} />
+              <ShoppingCart size={16} />
               <span>Sotib olish</span>
             </button>
           </div>
@@ -85,34 +80,36 @@ Menga shu noutbuk yoqdi ! Javobingizni kutaman
 
       {/* MODAL */}
       {showModal && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 backdrop-blur-sm">
-          <div className="bg-[#12121a] border border-[#00BFFF]/40 rounded-2xl p-5 w-[90%] max-w-md relative shadow-2xl shadow-[#00BFFF]/20">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-[#0d0d0d] border border-gray-700 rounded-2xl p-6 w-[90%] max-w-md relative">
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-3 right-3 text-gray-400 hover:text-white text-xl"
             >
               ✕
             </button>
-            <img
-              src={image}
-              alt={model}
-              className="w-full h-44 object-cover rounded-xl mb-3"
-            />
-            <h3 className="text-xl font-bold text-[#00BFFF] mb-1">{model}</h3>
+
+            <img src={image} alt={model} className="w-full h-48 object-cover rounded-xl mb-4" />
+            <h3 className="text-xl font-bold text-white mb-1">{model}</h3>
             <p className="text-gray-300 mb-2">💰 ${price}</p>
-            <p className="text-gray-400 mb-4 whitespace-pre-line text-sm leading-relaxed">
-              {specs}
-            </p>
+            <p className="text-gray-400 mb-5 whitespace-pre-line text-sm leading-relaxed">{specs}</p>
 
             <button
               onClick={handleBuyNow}
-              className="w-full py-2 rounded-lg bg-gradient-to-r from-[#00BFFF] to-[#8A2BE2] text-white font-semibold hover:shadow-lg hover:shadow-[#00BFFF]/40 transition-all duration-300"
+              className="w-full py-2 rounded-lg bg-gradient-to-r from-white to-gray-200 text-black font-semibold hover:from-gray-300 hover:to-white transition-all"
             >
               Admin bilan bog‘lanish
             </button>
           </div>
         </div>
       )}
+
+      <style>{`
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </>
   );
 }

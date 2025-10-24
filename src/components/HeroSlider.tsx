@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const laptopImages = [
-  '/ChatGPT Image Oct 22, 2025, 06_17_57 PM.png', // public ichidagi fayl
+  '/orgtechlogo.png', // local rasm
   'https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=1200',
   'https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=1200',
 ];
@@ -27,8 +27,10 @@ const HeroSlider = () => {
 
   return (
     <div className="relative w-full h-[400px] md:h-[700px] overflow-hidden rounded-2xl group">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#00BFFF]/20 via-transparent to-[#8A2BE2]/20 z-10 pointer-events-none"></div>
+      {/* Yuqoridan pastga oq–qora gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/50 z-10 pointer-events-none"></div>
 
+      {/* Slaydlar */}
       <div
         className="flex transition-transform duration-700 ease-in-out h-full"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -40,25 +42,28 @@ const HeroSlider = () => {
               alt={`Laptop ${index + 1}`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           </div>
         ))}
       </div>
 
+      {/* Chap o‘tkazish tugmasi */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full glass-effect hover:bg-[#00BFFF]/20 transition-all duration-300 opacity-0 group-hover:opacity-100"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/30 transition-all duration-300 opacity-0 group-hover:opacity-100"
       >
-        <ChevronLeft size={28} className="text-[#00BFFF]" />
+        <ChevronLeft size={28} className="text-white" />
       </button>
 
+      {/* O‘ng o‘tkazish tugmasi */}
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full glass-effect hover:bg-[#00BFFF]/20 transition-all duration-300 opacity-0 group-hover:opacity-100"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/30 transition-all duration-300 opacity-0 group-hover:opacity-100"
       >
-        <ChevronRight size={28} className="text-[#00BFFF]" />
+        <ChevronRight size={28} className="text-white" />
       </button>
 
+      {/* Slayd indikatorlari */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
         {laptopImages.map((_, index) => (
           <button
@@ -66,7 +71,7 @@ const HeroSlider = () => {
             onClick={() => setCurrentSlide(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentSlide
-                ? 'w-8 bg-gradient-to-r from-[#00BFFF] to-[#8A2BE2]'
+                ? 'w-8 bg-gradient-to-r from-white to-gray-400'
                 : 'bg-white/30 hover:bg-white/50'
             }`}
           />

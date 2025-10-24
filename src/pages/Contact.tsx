@@ -2,11 +2,11 @@ import { Send, Phone } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <div className="min-h-screen pt-32 pb-20 px-4">
+    <div className="min-h-screen pt-32 pb-20 px-4 bg-[#0a0a0a] text-gray-100">
       <div className="max-w-7xl mx-auto">
         {/* Sarlavha */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text animate-float">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white animate-float">
             Biz bilan bog‘laning
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -21,19 +21,19 @@ const Contact = () => {
             style={{ animation: 'fadeInLeft 0.8s ease-out' }}
           >
             {/* Telefon */}
-            <div className="glass-effect rounded-2xl p-8 hover:border-[#00BFFF]/60 transition-all duration-300 group">
+            <div className="rounded-2xl border border-gray-700 p-8 hover:border-gray-400 transition-all duration-300 bg-[#111]">
               <div className="flex items-start space-x-4">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#00BFFF] to-[#8A2BE2] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <Phone size={24} className="text-white" />
+                <div className="w-14 h-14 rounded-full bg-gray-100 text-black flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform">
+                  <Phone size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#00BFFF] mb-2">Telefon</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">Telefon</h3>
                   <p className="text-gray-400 mb-3">
                     Qo‘ng‘iroq qilib tezda ma’lumot oling yoki buyurtma bering.
                   </p>
                   <a
                     href="tel:+998335977770"
-                    className="text-[#00BFFF] hover:text-[#8A2BE2] transition-colors font-semibold text-lg"
+                    className="text-gray-200 hover:text-white transition-colors font-semibold text-lg underline underline-offset-4"
                   >
                     +998 33 597 77 70
                   </a>
@@ -42,13 +42,13 @@ const Contact = () => {
             </div>
 
             {/* Telegram */}
-            <div className="glass-effect rounded-2xl p-8 hover:border-[#00BFFF]/60 transition-all duration-300 group">
+            <div className="rounded-2xl border border-gray-700 p-8 hover:border-gray-400 transition-all duration-300 bg-[#111]">
               <div className="flex items-start space-x-4">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#00BFFF] to-[#8A2BE2] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <Send size={24} className="text-white" />
+                <div className="w-14 h-14 rounded-full bg-gray-100 text-black flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform">
+                  <Send size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#00BFFF] mb-2">Telegram</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">Telegram</h3>
                   <p className="text-gray-400 mb-3">
                     Tezkor javob olish uchun Telegram orqali yozing.
                   </p>
@@ -56,7 +56,7 @@ const Contact = () => {
                     href="https://t.me/OrgTech_uz"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#00BFFF] hover:text-[#8A2BE2] transition-colors font-semibold text-lg"
+                    className="text-gray-200 hover:text-white transition-colors font-semibold text-lg underline underline-offset-4"
                   >
                     @ORGTECH_admin
                   </a>
@@ -65,18 +65,18 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* O'ng qism */}
+          {/* O‘ng qism */}
           <div
-            className="glass-effect rounded-2xl p-8 lg:p-12 flex flex-col justify-center"
+            className="rounded-2xl border border-gray-700 p-8 lg:p-12 flex flex-col justify-center bg-[#111]"
             style={{ animation: 'fadeInRight 0.8s ease-out' }}
           >
             <div className="text-center mb-8">
               <img
-                src="/logo.jpg" // ✅ faqat `/` dan boshlanishi kerak
+                src="/logo.jpg"
                 alt="ORGTECH Logo"
-                className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-[#00BFFF] object-cover shadow-lg"
+                className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-gray-600 object-cover shadow-lg grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <h2 className="text-3xl font-bold gradient-text mb-4">ORGTECH</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">ORGTECH</h2>
               <p className="text-gray-400 leading-relaxed">
                 Aqlli texnologiya. To‘g‘ri tanlov.
               </p>
@@ -84,7 +84,7 @@ const Contact = () => {
 
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-xl font-semibold text-[#00BFFF] mb-4">
+                <h3 className="text-xl font-semibold text-white mb-4">
                   Ish vaqti
                 </h3>
                 <div className="space-y-2 text-gray-400">
@@ -94,12 +94,12 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-[#00BFFF]/20">
+              <div className="pt-6 border-t border-gray-700">
                 <a
                   href="tg://resolve?domain=ORGTECH_admin"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#00BFFF] to-[#8A2BE2] hover:shadow-lg hover:shadow-[#00BFFF]/50 transition-all duration-300 font-semibold text-center group"
+                  className="block w-full py-4 px-6 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-all duration-300 text-center group"
                 >
                   <span className="flex items-center justify-center space-x-2">
                     <Send size={20} className="group-hover:translate-x-1 transition-transform" />
